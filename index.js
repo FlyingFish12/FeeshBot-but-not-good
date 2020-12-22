@@ -1,8 +1,7 @@
 const Discord = require(`discord.js`);
-
 const client = new Discord.Client();
-const fs = require('fs');
-const prefix = '&';
+const fs = require('fs'); 
+const prefix = 'F?';
 
 client.commands = new Discord.Collection();
 
@@ -12,9 +11,12 @@ for(const file of commandFiles){
 
                 client.commands.set(command.name, command);
 }
- 
+
+    client.once('ready', () => {
+        console.log('Online!');
+});
   
-        Client.on('message', message => {
+        client.on('message', message => {
   
           if(!message.content.startsWith(`${prefix}`)) return;
           if (message.author.bot) return;
@@ -22,7 +24,7 @@ for(const file of commandFiles){
             const args = message.content.trim().split(/ +/g);
         
             const commandName = args[0].slice(prefix.length).toLowerCase();
-            const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+            const command = client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         
           
          if(!command) return;
@@ -31,4 +33,4 @@ for(const file of commandFiles){
         
     });
     //Add any other events
-client.login(token)
+client.login() //put inside the brackets whatever method you use for the token 
