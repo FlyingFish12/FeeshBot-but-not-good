@@ -20,13 +20,13 @@ for(const file of commandFiles){
   
         client.on('message', message => {
   
-          if(!message.content.startsWith(`${prefix}`)) return;
+          if(!message.content.toLowerCase().startsWith(`${prefix}`)) return;
           if (message.author.bot) return;
       
             const args = message.content.trim().split(/ +/g);
         
             const commandName = args[0].slice(prefix.length).toLowerCase();
-            const command = client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+            const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         
           
          if(!command) return;

@@ -1,0 +1,22 @@
+{
+  "name": "feeshbot",
+  "version": "1.0.0",
+  "description": "npm installs you will need to do if you haven't done so already",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyingFish12/FeeshBot.git"
+  },
+  "author": "Fefe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlyingFish12/FeeshBot/issues"
+  },
+  "homepage": "https://github.com/FlyingFish12/FeeshBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
