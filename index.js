@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const human = require('humanize');
 const paginationEmbed = require('discord.js-pagination');
 const fs = require('fs'); 
-const prefix = 'F?';
+const prefix = 'f?';
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
