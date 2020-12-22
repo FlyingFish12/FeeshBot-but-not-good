@@ -1,6 +1,8 @@
 const { MessageEmbed } = require('discord.js');
 const Discord = require('discord.js');
-module.exports ={
+const human = require('humanize');
+const paginationEmbed = require('discord.js-pagination');
+module.exports={
     name: 'invite',
     description: "An invite command",
     aliases: ['botinvite'],
