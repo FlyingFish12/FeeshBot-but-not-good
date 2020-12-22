@@ -30,5 +30,5 @@ for(const file of commandFiles){
         command.execute(message, args, client);
         
     });
-client.login('NzkwODc2MDc5NDU5MDA4NTMy.X-G-vw.sXu8683O2XmfYgPFxilofySEJ4A')
-//Add any other events
+    //Add any other events
+client.login(token)
