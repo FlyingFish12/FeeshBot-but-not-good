@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FlyingFish12/FeeshBot#readme",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "humanize": "0.0.9"
   }
 }
