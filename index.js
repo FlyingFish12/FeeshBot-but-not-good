@@ -41,5 +41,5 @@ for(const file of commandFiles){
                       .setDescription(`I have been added to a new server! \n Server name is ${guild.name} (id: ${guild.id}). \n This server has ${guild.memberCount} members!`)
       BotOwner.send(JoinEmbed)
 })
-    //Add any other events
-client.login(); //put inside the brackets whatever method you use for the token'); 
+
+client.login(process.env.BOT_TOKEN);
