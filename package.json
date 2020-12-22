@@ -18,7 +18,9 @@
   "homepage": "https://github.com/shyguy2601/CodeForFefe#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
+    "discord.js-pagination": "^1.0.3",
     "fs": "0.0.1-security",
+    "humanize": "0.0.9",
     "node.js": "0.0.1-security"
   }
 }

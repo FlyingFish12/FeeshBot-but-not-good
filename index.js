@@ -42,4 +42,4 @@ for(const file of commandFiles){
       BotOwner.send(JoinEmbed)
 })
     //Add any other events
-client.login() //put inside the brackets whatever method you use for the token 
+client.login(); //put inside the brackets whatever method you use for the token'); 
