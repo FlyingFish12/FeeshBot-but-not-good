@@ -7,6 +7,7 @@ module.exports ={
     description: "A servers command",
     aliases: ['servers'],
     execute(message,args,client){
+      const isBotOwner = message.author.id === `427476318050058251`;
         if (!isBotOwner) {
             message.channel.send(`Your Not Good Enough For This Command!`);
     } else {
