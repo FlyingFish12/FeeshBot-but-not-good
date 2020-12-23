@@ -16,6 +16,17 @@ for(const file of commandFiles){
 
     client.once('ready', () => {
         console.log('Online!');
+        const activities_list = [
+                "Say \"F?Help\" To Learn My Commands!", 
+                "Playing Games With People!",
+                "Finding Interesting Facts...",
+                "Test Your Knowlage With \"F?Trivia\"!"
+                ];
+        setInterval(() => {
+          const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+          client.user.setActivity(activities_list[index]);
+          type: `PLAYING`
+      }, 5000);
 });
   
         client.on('message', message => {

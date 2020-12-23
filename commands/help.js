@@ -30,7 +30,7 @@ const socialembed = new Discord.MessageEmbed()
         .setTitle(`Social Commands`)
         .addFields({
                 name: `F?Help Facts`,
-                value: `Say **"F?Help Facts"** to get a list of all the **Trivia** commands and how to use them!`
+                value: `Say **"F?Help Facts"** to get a list of all the **Fact** commands and how to use them!`
         })
         .addFields({
                 name: `F?Help Trivia`,
