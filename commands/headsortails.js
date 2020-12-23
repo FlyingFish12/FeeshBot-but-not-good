@@ -8,17 +8,19 @@ module.exports ={
     aliases: ['hot','cf','coinflip','flip'],
     execute(message,args,client){
         const headsortails = {
-            "Heads": ['heads', 'h', 'head'],
-            "Tails": ['tails', 't', 'tail'],
+            "heads": ['heads', 'h', 'head'],
+            "tails": ['tails', 't', 'tail'],
           };
+           
+          if (cmd === 'hot' || cmd === 'Headsortails' || cmd === 'cf' || cmd === 'coinflip' || cmd === 'flip') {
           const chosenHeadsortails = ["heads", "tails"][Math.floor(Math.random() * 2)];
-             
+          
           const HeadsortailsEmbed = new Discord.MessageEmbed()
                   .setColor(`#123456`)  
                   .setTitle('Heads or Tails?')
                   .setTimestamp()
                   .setFooter(`If You Are Confused Do F?Help CoinFlip!`);
-                
+                 
           message.channel.send(HeadsortailsEmbed);
           message.channel.awaitMessages(m => m.author.id == message.author.id,
                   {max: 1, time: 10000}).then(collected => {
@@ -27,6 +29,6 @@ module.exports ={
                           else
                               message.channel.send('You Lose. The Answer Was ' + chosenHeadsortails)
                   })
-
+        }
     }
 }

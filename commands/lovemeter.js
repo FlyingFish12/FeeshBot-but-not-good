@@ -5,8 +5,32 @@ const paginationEmbed = require('discord.js-pagination');
 module.exports ={
     name: 'lovemeter',
     description: "A lovemeter command",
-    aliases: ['meter','love','l'],
+    aliases: ['lovemeter','love','l'],
     execute(message,args,client){
+        const LoveOMeter = [
+            {description: '100% Love', inHearts: ['💖💖💖💖💖💖💖💖💖💖']},
+            {description: '95% Love', inHearts: ['💖💖💖💖💖💖💖💖💖❤️']},
+            {description: '90% Love', inHearts: ['💖💖💖💖💖💖💖💖💖💔']},
+            {description: '85% Love', inHearts: ['💖💖💖💖💖💖💖💖❤️💔']},
+            {description: '80% Love', inHearts: ['💖💖💖💖💖💖💖💖💔💔']},
+            {description: '75% Love', inHearts: ['💖💖💖💖💖💖💖❤️💔💔']},
+            {description: '70% Love', inHearts: ['💖💖💖💖💖💖💖💔💔💔']},
+            {description: '65% Love', inHearts: ['💖💖💖💖💖💖❤️💔💔💔']},
+            {description: '60% Love', inHearts: ['💖💖💖💖💖💖💔💔💔💔']},
+            {description: '55% Love', inHearts: ['💖💖💖💖💖❤️💔💔💔💔']},
+            {description: '50% Love', inHearts: ['💖💖💖💖💖💔💔💔💔💔']},
+            {description: '45% Love', inHearts: ['💖💖💖💖❤️💔💔💔💔💔']},
+            {description: '40% Love', inHearts: ['💖💖💖💖💔💔💔💔💔💔']},
+            {description: '35% Love', inHearts: ['💖💖💖❤️💔💔💔💔💔💔']},
+            {description: '30% Love', inHearts: ['💖💖💖💔💔💔💔💔💔💔']},
+            {description: '25% Love', inHearts: ['💖💖❤️💔💔💔💔💔💔💔']},
+            {description: '20% Love', inHearts: ['💖💖💔💔💔💔💔💔💔💔']},
+            {description: '15% Love', inHearts: ['💖❤️💔💔💔💔💔💔💔💔']},
+            {description: '10% Love', inHearts: ['💖💔💔💔💔💔💔💔💔💔']},
+            {description: '5% Love', inHearts: ['❤️💔💔💔💔💔💔💔💔💔']},
+            {description: '0% Love', inHearts: ['💔💔💔💔💔💔💔💔💔💔']}
+            ];
+            
         const chosenLoveOMeter = LoveOMeter[Math.floor(Math.random() * LoveOMeter.length)];
         const {
                 users,
