@@ -5,14 +5,12 @@ const paginationEmbed = require('discord.js-pagination');
 module.exports ={
     name: 'headsortails',
     description: "A heads or tails command",
-    aliases: ['hot','cf','coinflip','flip'],
+    aliases: ['hot','cf','coinflip','flip', 'headsortails'],
     execute(message,args,client){
         const headsortails = {
             "heads": ['heads', 'h', 'head'],
             "tails": ['tails', 't', 'tail'],
           };
-           
-          if (cmd === 'hot' || cmd === 'Headsortails' || cmd === 'cf' || cmd === 'coinflip' || cmd === 'flip') {
           const chosenHeadsortails = ["heads", "tails"][Math.floor(Math.random() * 2)];
           
           const HeadsortailsEmbed = new Discord.MessageEmbed()
@@ -29,6 +27,6 @@ module.exports ={
                           else
                               message.channel.send('You Lose. The Answer Was ' + chosenHeadsortails)
                   })
-        }
+        
     }
 }
