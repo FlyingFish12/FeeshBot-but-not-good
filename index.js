@@ -26,7 +26,7 @@ for(const file of commandFiles){
           const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
           client.user.setActivity(activities_list[index]);
           type: `PLAYING`
-      }, 5000);
+      }, 15000);
 });
   
         client.on('message', message => {
