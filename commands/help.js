@@ -10,7 +10,7 @@ module.exports ={
         const helpembed = new Discord.MessageEmbed()
         .setColor(`#EB491E`)
         .setTitle(`Feesh Help Commands`)
-        .setDescription('**F?Help Facts** ? \n\n **F?Help Topic** ? \n\n **F?Help Fun** ? \n\n **F?Help Util** ? \n\n **F?Support** ?')
+        .setDescription('**F?Help Facts** 💭 \n\n **F?Help Topic** 💬 \n\n **F?Help Fun** 🎱 \n\n **F?Help Util** 🔧 \n\n **F?Support** 👉')
         .setTimestamp()
         .setFooter(`Say "F?Help [category]" For That categories Commands!`)
 
@@ -20,20 +20,8 @@ const triviahelpembed = new Discord.MessageEmbed()
         .setTitle(`Trivia Commands`)
         .addFields({
                 name: `F?Trivia`,
-                value: `Say **F?Trivia** to get a random trivia question! \n In Trivia, you get a random question and you have 10 seconds to answer it. You get 5 points every time you get a correct answer! **You must answer with the answer number it is instead of the written answer or you won't get it right.** Good luck!`
+                value: `Say **F?Trivia** to get a random trivia question! \n In Trivia, you get a random question and you have 10 seconds to answer it. **You must answer with the answer number it is instead of the written answer or you won't get it right.** Good luck!`
        })
-       .addFields({
-               name: `F?Trivia Hard`,
-               value: `Say **F?TriviaHard** to get a **Hard** trivia question! \n In this Trivia, you get a random question that is quite hard and you have a whole **20 seconds** to answer it. You get 10 points per answer!!!**You must answer with the answer number it is instead of the written answer or you won't get it right.** Good luck!`
-        })
-        .addFields({
-                name: `F?Trivia Intermediate`,
-                value: `Say **F?TriviaInter** to get an **Intermediate** trivia question! \n In this Trivia, you get a random intermediate question and you have **10 seconds** to answer it. You get 5 points per correct answer! **You must answer with the answer number it is instead of the written answer or you won't get it right.** Have fun!`
-       })
-       .addFields({
-               name: `F?Trivia Easy`,
-               value: `Say **F?TriviaEasy** to get an **Easy** trivia question! \n In this Trivia, you get a random question that is fairly easy and you have **5 seconds** to answer it. You only get 2 points per correct answer! **You must answer with the answer number it is instead of the written answer or you won't get it right.** I hope you get it right...!`
-        })
         .setTimestamp()
         .setFooter(`F?Help for all commands`)
 

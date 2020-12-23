@@ -34,12 +34,12 @@ for(const file of commandFiles){
         command.execute(message, args, client);
         
     });
-    client.on("guildCreate", guild => {
-      const BotOwner = `427476318050058251`;
-              const JoinEmbed = new Discord.MessageEmbed()
+client.on("guildCreate", guild => {
+              const NewGuildEmbed = new Discord.MessageEmbed()
                       .setTitle('Added To New Server!')
                       .setDescription(`I have been added to a new server! \n Server name is ${guild.name} (id: ${guild.id}). \n This server has ${guild.memberCount} members!`)
-      BotOwner.send(JoinEmbed)
+                const logschannel = client.channels.fetch('777203585825112085');
+        logschannel.send(NewGuildEmbed)
 })
 
 client.login(process.env.BOT_TOKEN);
