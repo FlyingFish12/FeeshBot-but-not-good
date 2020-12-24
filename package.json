@@ -1,7 +1,7 @@
 {
   "name": "feeshbot",
   "version": "1.0.0",
-"description": "npm installs you will need to do if you haven't done so already",
+"description": "A very fishy Discord bot",
   "main": "index.js",
   "scripts": {
     "test": "index.js"
