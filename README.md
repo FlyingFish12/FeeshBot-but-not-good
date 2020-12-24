@@ -1,9 +1,9 @@
+# FeeshBot
 
-npm installs you will need to do if you haven't done so already
+To get started as quickly as possible, run the following commands.
 
-You install these by typing the following commands in your terminal:
-1. npm install discord.js
-2. npm install node.js
-3. npm install fs
-4. npm install humanize
-5. npm install discord.js-pagination
+Run ``npm i`` to install all dependencies
+
+Then run ``node index.js`` to start the bot.
+
+That's it! You should have your own instance of FeeshBot up and running!
