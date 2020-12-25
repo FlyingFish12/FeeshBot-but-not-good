@@ -1,5 +1,4 @@
-const { MessageEmbed } = require("discord.js");
-const Discord = require("discord.js");
+const { MessageEmbed, Discord } = require("discord.js");
 const human = require("humanize");
 const paginationEmbed = require("discord.js-pagination");
 module.exports = {
