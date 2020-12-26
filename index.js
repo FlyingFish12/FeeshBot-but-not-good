@@ -19,10 +19,11 @@ for (const file of commandFiles) {
 client.once("ready", () => {
   console.log("Online!");
   const activities_list = [
-    'Say "F?Help" To Learn My Commands!',
+    "Say 'F?Help' To Learn My Commands!",
+    "Say 'F?Help' To Learn My Commands!",
     "Playing Games With People!",
     "Finding Interesting Facts...",
-    'Test Your Knowledge With "F?Trivia"!',
+    "Test Your Knowledge With 'F?Trivia'!",
   ];
   setInterval(() => {
     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
