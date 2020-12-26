@@ -14,7 +14,7 @@ module.exports = {
   ],
   execute(message, args, client) {
     const jsonData = require("../arrays/rcd.json");
-
+    const records = Object.values(jsonData);
     const randomRecord = records[parseInt(Math.random() * records.length)];
 
     message.channel.send(randomRecord);
