@@ -50,13 +50,7 @@ client.on("message", (message) => {
   command.execute(message, args, client);
 });
 client.on("guildCreate", (guild) => {
-  const NewGuildEmbed = new Discord.MessageEmbed()
-    .setTitle("Added To New Server!")
-    .setDescription(
-      `I have been added to a new server! \n Server name is ${guild.name} (id: ${guild.id}). \n This server has ${guild.memberCount} members!`
-    );
-  const logschannel = client.channels.fetch("777203585825112085");
-  logschannel.send(NewGuildEmbed);
+      console.log(`I have been added to a new server! \n Server name is ${guild.name} (id: ${guild.id}). \n This server has ${guild.memberCount} members!`)
 });
 
 client.login(process.env.BOT_TOKEN);
