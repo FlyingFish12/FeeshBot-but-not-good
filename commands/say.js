@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 const human = require('humanize');
 const paginationEmbed = require('discord.js-pagination');
 module.exports ={
-    name: 'lovemeter',
-    description: "A lovemeter command",
+    name: 'say',
+    description: "A Say Command",
     aliases: ['say','s','write'],
     execute(message,args,client){
 let args = message.content.split(" ").slice(1);
