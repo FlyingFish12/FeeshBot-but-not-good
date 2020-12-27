@@ -12,7 +12,7 @@ module.exports ={
     message.delete();
         const sayembed = new Discord.MessageEmbed()
             .setColor('#50C878')
-            .setDescription(message.args.join(` `)).cleanContent;
+            .setDescription(args.join(` `)).cleanContent;
 
     }
 }
