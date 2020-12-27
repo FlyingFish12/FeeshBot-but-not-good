@@ -5,7 +5,7 @@ const paginationEmbed = require("discord.js-pagination");
 module.exports = {
   name: "userinfo",
   description: "A userinfo command",
-  aliases: ["whois", "ui"],
+  aliases: ["whois", "ui", "userinfo"],
   execute(message, args, client) {
     function Whois(message) {
       const { users, mentions } = message;
