@@ -29,7 +29,7 @@ module.exports = {
           {
             name: "Joined Server",
             value: `\`\`\`${human.date(
-              "m-d-y | h:i:s",
+              "d-m-y | h:i:s",
               mentions.users.first().joinedAt
             )} ${mentions.users.first().joinedAt >= 12 ? "PM" : "AM"}\`\`\``,
             inline: true,
@@ -37,7 +37,7 @@ module.exports = {
           {
             name: "Account Created",
             value: `\`\`\`${human.date(
-              "m-d-y | h:i:s",
+              "d-m-y | h:i:s",
               mentions.users.first().createdAt
             )} ${mentions.users.first().createdAt >= 12 ? "AM" : "PM"}\`\`\``,
             inline: true,
