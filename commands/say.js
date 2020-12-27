@@ -6,8 +6,8 @@ module.exports ={
     name: 'say',
     description: "A Say Command",
     aliases: ['say','s','write'],
-    execute(message,args,client){
-
+    execute(message,client){
+    let args = message.content.split(" ").slice(1);
     message.delete();
 
         const sayembed = new Discord.MessageEmbed()
