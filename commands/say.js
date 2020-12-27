@@ -8,11 +8,11 @@ module.exports ={
     aliases: ['say','s','write'],
     execute(message,args,client){
 
-    
     message.delete();
+
         const sayembed = new Discord.MessageEmbed()
             .setColor('#50C878')
             .setDescription(args.join(` `)).cleanContent;
-
+        message.channel.send(sayembed)
     }
 }
