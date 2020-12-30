@@ -12,6 +12,7 @@ module.exports ={
                     user,
                     mentions
             } = message;
+            const avatarperson = mentions.users.first() || mentions.users.first().id
             const avatarembed = new Discord.MessageEmbed()
 
                     .setColor(`#DA005A`)
@@ -19,7 +20,7 @@ module.exports ={
             if (!mentions.users.size) {
                     avatarembed.setDescription("⚠️ Please mention a member in the server, for example `@Fefe`.");
             } else {
-                    avatarembed.setImage(mentions.users.first().displayAvatarURL({dynamic: true, size: 1024}))
+                    avatarembed.setImage(avatarperson.displayAvatarURL({dynamic: true, size: 1024}))
             }
             message.channel.send(avatarembed);
     }
