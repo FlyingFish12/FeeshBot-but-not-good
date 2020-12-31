@@ -8,23 +8,24 @@ module.exports ={
     aliases: ['av'],
     execute(message,args,client){
         function avatar(message) {
-            const {
-                    user,
-                    mentions
-            } = message;
-            const avatarperson = mentions.users.first() || mentions.users.first().id
-            const avatarembed = new Discord.MessageEmbed()
-
-                    .setColor(`#DA005A`)
-                    .setTitle(`Avatar`)
-            if (!mentions.users.size) {
-                    avatarembed.setDescription("⚠️ Please mention a member in the server, for example `@Fefe`.");
-            } else {
-                    avatarembed.setImage(avatarperson.displayAvatarURL({dynamic: true, size: 1024}))
-            }
-            message.channel.send(avatarembed);
-    }
-    avatar(message); 
+                message.client.users.fetch(message.content.split(" ")[1]).then((user)=>{
+                    const avatarembed = new Discord.MessageEmbed()
+                      .setColor(`#DA005A`)
+                      .setTitle(`Avatar`)
+                      .setImage(user.displayAvatarURL({dynamic: true, size: 1024}));
+                
+                    message.channel.send(avatarembed);
+                  }).catch(()=>{
+                    const avatarperson = message.mentions.users.first() || message.author
+                    const avatarembed = new Discord.MessageEmbed()
+                      .setColor(`#DA005A`)
+                      .setTitle(`Avatar`)
+                      .setImage(avatarperson.displayAvatarURL({dynamic: true, size: 1024}));
+                
+                    message.channel.send(avatarembed);
+                  });
+                }
+                avatar(message);
 
     }
 }
