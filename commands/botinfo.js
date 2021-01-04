@@ -23,9 +23,9 @@ module.exports ={
                 {name: `Bot Owner`, value: `\`\`\`Fefe\`\`\``, inline: true},
                 {name: `Owners ID`, value: `\`\`\`427476318050058251\`\`\``, inline: true},
                 {name: `Number Of Servers`, value: `\`\`\`${guilds.length}\`\`\``, inline: true},
-                {name: `Uptime`, value: `\`\`\`${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds\`\`\``, inline: true},
+                {name: `Hosted On`, value: `\`\`\`Heroku\`\`\``, inline: true},
                 {name: `Made With`, value: `\`\`\`Discord.js with Visual Studio Code\`\`\``, inline: true},
-                {name: `Hosted On`, value: `\`\`\`Heroku\`\`\``, inline: true})
+                {name: `Uptime`, value: `\`\`\`${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds\`\`\``, inline: true})
                 .setTimestamp()
                 .setFooter(`Say "F?ServerRoles" for a list of the servers roles!`)
         message.channel.send(botinfoEmbed);
