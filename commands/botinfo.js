@@ -3,9 +3,9 @@ const Discord = require('discord.js');
 const human = require('humanize');
 const paginationEmbed = require('discord.js-pagination');
 module.exports ={
-    name: 'avatar',
-    description: "An avatar command",
-    aliases: ['av'],
+    name: 'botinfo',
+    description: "A command that shows the bots information",
+    aliases: ['bi', 'info'],
     execute(message,args,client){
 
        let days = Math.floor(client.uptime / 86400000);
