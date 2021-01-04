@@ -5,7 +5,7 @@ const paginationEmbed = require('discord.js-pagination');
 module.exports ={
     name: 'say',
     description: "A Say Command",
-    aliases: ['say','s','write'],
+    aliases: ['say','s','write', 'repeat'],
     execute(message,client){
     let args = message.content.split(" ").slice(1);
     message.delete();
