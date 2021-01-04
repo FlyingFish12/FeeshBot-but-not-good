@@ -17,7 +17,7 @@ module.exports ={
 
         const botinfoEmbed = new Discord.MessageEmbed()
                 .setColor(`#4893C0`)
-                .setTitle(`Server Info`)
+                .setTitle(`Feesh Bot's Info`)
                 .addFields(
                 {name: `Bots ID`, value: `\`\`\`735918313921708053\`\`\``, inline: true},
                 {name: `Bot Owner`, value: `\`\`\`Fefe\`\`\``, inline: true},
