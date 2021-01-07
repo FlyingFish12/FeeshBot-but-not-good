@@ -50,7 +50,7 @@ client.on("message", (message) => {
   command.execute(message, args, client);
 });
 client.on("guildCreate", (guild) => {
-      console.log(`I have been added to a new server! Server name is ${guild.name} (id: ${guild.id}). This server has ${guild.memberCount} members! \n I am now in ${guilds.length} servers!`)
+      console.log(`I have been added to a new server!`)
 });
 
 client.login(process.env.BOT_TOKEN);
