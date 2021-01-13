@@ -12,6 +12,12 @@ Here is a short list of some commands FeeshBot can do:
 - Topic \- Sends a random topic for you and your fellow Discord'ers to debate!
 - Coin Flip \- Take your bet! If you guess it right... well... nice luck i guess?
 
+# More info
+
+To start off using feeshbot just simply type `F?Help` to see all the commands. FeeshBot reacts to both upper and lower case text, even in its prefix, meaning you can be lazy whenever you want without consequences! The bot is still being updated and monitored constantly so come and join [FeeshBot Official](https://discord.gg/TJUFyfdc9b) to keep track of all the changes and connect with the rest of the community!
+
+FeeshBot was made with Discord.js and is hosted on Heroku.
+
 # Getting Your Own FeeshBot
 
 To get started as quickly as possible, run the following commands.
