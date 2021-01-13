@@ -9,7 +9,7 @@ module.exports = {
   execute(message, args, client) {
     const isBotOwner = message.author.id === `427476318050058251`;
     if (!isBotOwner) {
-      message.channel.send(`Your Not Good Enough For This Command!`);
+      message.channel.send(`**Secret tunnel! SECRET TUNNEL!** \n But your not allowd to go through :( How sad is that?`);
     } else {
       const guilds = client.guilds.cache.array();
       const generateEmbed = (start) => {
