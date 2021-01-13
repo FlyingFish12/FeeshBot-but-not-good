@@ -11,7 +11,7 @@ module.exports = {
       .setColor(`#EB491E`)
       .setTitle(`Feesh Help Commands`)
       .setDescription(
-        "**F?Help Facts** 💭 \n\n **F?Help Topic** 💬 \n\n **F?Help Fun** 🎱 \n\n **F?Help Util** 🔧 \n\n **F?Support** 👉"
+        "**F?Help Social** 💬 \n\n **F?Help Fun** 🎱 \n\n **F?Help Util** 🔧 \n\n **F?Support** 👉"
       )
       .setTimestamp()
       .setFooter(`Say "F?Help [category]" For That categories Commands!`);
@@ -34,7 +34,7 @@ module.exports = {
         value: `Say **"F?Help Facts"** to get a list of all the **Fact** commands and how to use them!`,
       })
       .addFields({
-        name: `F?Help Trivia`,
+        name: `F?Help Topic`,
         value: `Say **"F?Help Topic"** to get a list of any **Topic** commands there are!`,
       })
       .setTimestamp()
@@ -49,7 +49,11 @@ module.exports = {
       })
       .addFields({
         name: `F?CoinFlip`,
-        value: `Say **"F?CoinFlip [Heads or Tails]"** to play! The bot randomly picks either Heads or Tails and if you manage to guess the same choice you win! **out of use (for now)**`,
+        value: `Say **"F?CoinFlip [Heads or Tails]"** to play! The bot randomly picks either Heads or Tails and if you manage to guess the same choice you win!`,
+      })
+      .addFields({
+        name: `F?Love`,
+        value: `Say **"F?Love {member}"** to see how the bot rates your love!`,
       })
       .setTimestamp()
       .setFooter(`F?Help for all commands`);
@@ -115,6 +119,12 @@ module.exports = {
     if (!args[1]) return message.channel.send(helpembed);
     if (
       args[1].toLowerCase() === "triv" ||
+      args[1].toLowerCase() === "trivia"
+    ) {
+      return message.channel.send(triviahelpembed);
+    }
+    if (
+      args[1].toLowerCase() === "social" ||
       args[1].toLowerCase() === "trivia"
     ) {
       return message.channel.send(triviahelpembed);
