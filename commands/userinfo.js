@@ -15,7 +15,7 @@ module.exports = {
         Whoisembed.setColor("GREEN");
         Whoisembed.setDescription("You Gotta Mention Someone To Use This");
       } else {
-        Whoisembed.setColor(mentions.members.first().roles.highest.color);
+        Whoisembed.setColor(mentions.members.first().displayColor);
         Whoisembed.setTitle(`${mentions.users.first().username}'s Info`);
         Whoisembed.setThumbnail(
           mentions.users.first().displayAvatarURL({ dynamic: true })
