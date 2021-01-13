@@ -125,7 +125,7 @@ module.exports = {
     }
     if (
       args[1].toLowerCase() === "social" ||
-      args[1].toLowerCase() === "trivia"
+      args[1].toLowerCase() === "soc"
     ) {
       return message.channel.send(triviahelpembed);
     }
