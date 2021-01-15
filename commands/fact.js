@@ -46,7 +46,8 @@ module.exports ={
                "Fun Fact - If you look at the sun for too long, the light can penetrate your eyes and your retinal tissue. No good!",
                "Fun Fact - Peanuts are not nuts",
                "Fun Fact - The Creator of the Pringles Can is Buried in One",
-               "Fun Fact - A Million Earths Would Fit Inside the Sun."
+               "Fun Fact - A Million Earths Would Fit Inside the Sun.",
+               "Fun Fact - The bit of toothpaste you put on your toothbrush is called a nurdle."
        ];
        const randomFact = Fact[Math.floor(Math.random() * Fact.length)];
  
