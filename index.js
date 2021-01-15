@@ -49,8 +49,9 @@ client.on("message", (message) => {
 
   command.execute(message, args, client);
 });
+
 client.on("guildCreate", (guild) => {
-      console.log(`I have been added to a new server!`)
+  client.channels.cache.get('787677919374999643').send(`I have been added to a new server! Name - ${guild.name} (ID: ${guild.id})`)
 });
 
 client.login(process.env.BOT_TOKEN);
