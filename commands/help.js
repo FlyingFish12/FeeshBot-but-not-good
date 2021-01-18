@@ -109,10 +109,6 @@ module.exports = {
         name: `F?Server`,
         value: `Say **"F?Server"** to see some information about the server!`,
       })
-      .addFields({
-        name: `F?ServerRoles`,
-        value: `Say **"F?ServerRoles"** to see all of the servers roles!`,
-      })
       .setTimestamp()
       .setFooter(`F?Help for all commands`);
 
