@@ -1,5 +1,6 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, version: djsversion } = require("discord.js");
 const Discord = require("discord.js");
+const version = require('../package.json');
 const human = require("humanize");
 const paginationEmbed = require("discord.js-pagination");
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
     let seconds = Math.floor(client.uptime / 1000) % 60;
 
     const botinfoEmbed = new Discord.MessageEmbed()
-      .setColor(`#4893C0`)
+      .setColor(`#454ade`)
       .setTitle(`Feesh Bot's Info`)
       .addFields(
         { name: `Bot Owner`, value: `\`\`\`Fefe#6010\`\`\``, inline: true },
@@ -25,14 +26,11 @@ module.exports = {
           inline: true,
         },
         { name: `Framework`, value: `\`\`\`Discord.js\`\`\``, inline: true },
-        {
-          name: `Uptime`,
-          value: `\`\`\`${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds\`\`\``,
-          inline: true,
-        }
+        { name: `Node.js Version`, value: `\`\`\`${process.version}\`\`\``, inline: true },
+        { name: `Discord.js Version`, value: `\`\`\`${djsversion}\`\`\``, inline: true },
       )
       .setTimestamp()
-      .setFooter(`Say "F?ServerRoles" for a list of the servers roles!`);
+      .setFooter(`ID:${client.id}`);
     message.channel.send(botinfoEmbed);
   },
 };
