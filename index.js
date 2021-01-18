@@ -54,4 +54,8 @@ client.on("guildCreate", (guild) => {
   client.channels.cache.get('787677919374999643').send(`I have been added to a new server! Name - ${guild.name} (ID: ${guild.id})`)
 });
 
+client.on("guildDelete", (guild) => {
+  client.channels.cache.get('787677919374999643').send(`I have been removed from a server :c . Name - ${guild.name} (ID: ${guild.id})`)
+});
+
 client.login(process.env.BOT_TOKEN);

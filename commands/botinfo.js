@@ -30,7 +30,7 @@ module.exports = {
         { name: `Discord.js Version`, value: `\`\`\`${djsversion}\`\`\``, inline: true },
       )
       .setTimestamp()
-      .setFooter(`ID:${client.id}`);
+      .setFooter(`ID:735918313921708053`);
     message.channel.send(botinfoEmbed);
   },
 };
