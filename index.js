@@ -51,11 +51,11 @@ client.on("message", (message) => {
 });
 
 client.on("guildCreate", (guild) => {
-  client.channels.cache.get('787677919374999643').send(`I have been added to a new server! Name - ${guild.name} (ID: ${guild.id})`)
+  client.channels.cache.get('787701805534019584').send(`I have been added to a new server! Name - ${guild.name} (ID: ${guild.id})`)
 });
 
 client.on("guildDelete", (guild) => {
-  client.channels.cache.get('787677919374999643').send(`I have been removed from a server :c . Name - ${guild.name} (ID: ${guild.id})`)
+  client.channels.cache.get('800787128237031434').send(`I have been removed from a server :c . Name - ${guild.name} (ID: ${guild.id})`)
 });
 
 client.login(process.env.BOT_TOKEN);
