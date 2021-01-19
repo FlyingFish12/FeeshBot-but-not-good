@@ -1,12 +1,11 @@
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
-const Client = new Discord.Client();
-const Topgg = require('@top-gg/sdk')
+const Topgg = require('dblapi.js')
 const api = new Topgg.Api('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNTkxODMxMzkyMTcwODA1MyIsImJvdCI6dHJ1ZSwiaWF0IjoxNjExMDgxNzI3fQ.tb0JNNGE6OivNEwPVP2hacoY4E4YoCK2_TBJBzxa2xs')
 module.exports = {
     name: 'vote',
     description: "Get's the vote link",
-   async execute(message, args){
+   async execute(message, args, client){
     
     let has_voted;
 
