@@ -58,4 +58,6 @@ client.on("guildDelete", (guild) => {
   client.channels.cache.get('800787128237031434').send(`I have been removed from a server :c . Name - ${guild.name} (ID: ${guild.id})`)
 });
 
+//These are just here when the bot is kinda knew so i can see how well its doing, i will probably delete it sometime soon
+
 client.login(process.env.BOT_TOKEN);
