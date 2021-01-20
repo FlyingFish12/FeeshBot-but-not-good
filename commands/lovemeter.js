@@ -46,7 +46,7 @@ module.exports ={
         } else {
         LoveOMeterEmbed.setColor(`#123456`)  
         LoveOMeterEmbed.setTitle(`Love o Meter`)
-        LoveOMeterEmbed.setDescription(`**${message.author.username} x ${mentions.users.first().username} \n**${chosenLoveOMeter.description}** - ${chosenLoveOMeter.inHearts}`)
+        LoveOMeterEmbed.setDescription(`**${message.author.username} x ${mentions.users.first().username}** \n**${chosenLoveOMeter.description}** - ${chosenLoveOMeter.inHearts}`)
         LoveOMeterEmbed.setFooter('This Is Very Accurate');
         }                
         message.channel.send(LoveOMeterEmbed);
