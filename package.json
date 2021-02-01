@@ -20,6 +20,7 @@
     "dblapi.js": "^2.4.1",
     "discord.js": "^12.5.1",
     "discord.js-pagination": "^1.0.3",
+    "https": "^1.0.0",
     "humanize": "0.0.9",
     "install": "^0.13.0",
     "npm": "^6.14.11"
