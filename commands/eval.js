@@ -5,7 +5,7 @@ const paginationEmbed = require("discord.js-pagination");
 module.exports = {
   name: "eval",
   description: "cool kids only",
-  aliases: ["repl"],
+  aliases: [],
   execute(message, args, client) {
     if (
       message.author.id === "427476318050058251" ||
