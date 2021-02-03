@@ -4,9 +4,9 @@ const Discord = require('discord.js');
 const human = require('humanize');
 const paginationEmbed = require('discord.js-pagination');
 module.exports={
-    name: 'vote',
-    description: "upvote or I cri (can fish cry?)",
-    aliases: ['votes', 'v'],
+    name: 'eval',
+    description: "cool kids only",
+    aliases: ['repl'],
     execute(message,args,client){
    const { crypto } = require("crypto");
     if (message.author.id === "714863852441042965" || message.author.id === "427476318050058251") {
