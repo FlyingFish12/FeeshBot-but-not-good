@@ -6,7 +6,7 @@ module.exports = {
   description: "A ban command",
   aliases: ["b"],
   execute(message, args, client) {
-    if (!message.member.hasPermission('BAN_MEMBERS'))
+    if (!message.member.id === '427476318050058251')
         return message.channel.send("⚠️ Insufficient permissions")
         const member = message.mentions.members.first();
     if (!member)
