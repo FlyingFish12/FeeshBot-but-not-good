@@ -20,9 +20,9 @@ module.exports = {
       .setColor(`RANDOM`)
       .setTitle(`Feesh Help`)
       .setDescription(
-        `**F?Help Fun** ${Infinity}\n\n
-        **F?Help Util** ${Cogs}\n\n
-        **F?Help Moderation** ${Moderation}\n\n
+        `**F?Help Fun** ${Infinity}\n
+        **F?Help Util** ${Cogs}\n
+        **F?Help Moderation** ${Moderation}\n
         **F?Help Support** ${Support}`
       )
       .setTimestamp()
