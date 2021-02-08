@@ -44,6 +44,8 @@ module.exports = {
             }
         }
 
+        if(target.roles.cache.has(mutedRole.id)) return message.channel.send("⚠️ This user is already muted!");
+
     try {
       await target.roles.add(mutedRole);
 
