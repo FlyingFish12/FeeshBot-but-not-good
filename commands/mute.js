@@ -14,7 +14,7 @@ module.exports = {
 
     if (!message.member.hasPermission('MANAGE_MESSAGES'))
         return message.channel.send("⚠️ Insufficient permissions")
-      const target = message.mentions.members.first() || message.guild.members.get(args[0]);
+      const target = message.mentions.members.first()
     if (!target)
         return message.channel.send("⚠️ No user mentioned.")
         const reason = args.slice(3).join(" ")
