@@ -19,7 +19,7 @@ module.exports = {
       .setColor(`#454ade`)
       .setTitle(`Feesh Bot's Info`)
       .addFields(
-        { name: `Bot Owner`, value: `\`\`\`Fefe#6010\`\`\``, inline: true },
+        { name: `Bot Owner`, value: `\`\`\`Fefe#9196\`\`\``, inline: true },
         {
           name: `Servers`,
           value: `\`\`\`${guilds.length}\`\`\``,

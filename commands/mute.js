@@ -1,13 +1,12 @@
 const { MessageEmbed } = require("discord.js");
 const Discord = require("discord.js");
-const human = require("humanize");
-const paginationEmbed = require("discord.js-pagination");
 const fs = module.require("fs");
 const ms = module.require("ms")
 
 module.exports = {
   name: "mute",
   description: "A mute command",
+  aliases: ["m"],
   execute:async(message, args, client) => {
     
     const modlog = '797169854263984159'
@@ -18,9 +17,10 @@ module.exports = {
     if (!target)
         return message.channel.send("⚠️ No user mentioned.")
         const reason = args.slice(3).join(" ")
-        const time = ms(args[2]);
+        const time = args[2];
         if (!time || time > 1209600000)
-          return message.channel.send('⚠️ Please enter a length of time of 14 days or less (1s/m/h/d)');
+        return message.channel.send('⚠️ Please enter a valid length of time of 14 days or less (1s/m/h/d)');
+
 
           let mutedRole = message.guild.roles.cache.find(mR => mR.name === "Muted");
 
@@ -66,6 +66,6 @@ module.exports = {
         } catch (err) {
           message.channel.send('⚠️ Failed to unmute. Try again.', err.message)
         }
-    }, time);
+    }, ms(time));
   }
 }
