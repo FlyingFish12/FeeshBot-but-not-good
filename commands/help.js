@@ -57,6 +57,14 @@ module.exports = {
         name: `F?Unban {id}`,
         value: `Unbans a member.`
       })
+      .addFields({
+        name: `F?Mute {Member} {Time} [Reason]`,
+        value: `Mutes a member.`
+      })      
+      .addFields({
+        name: `F?Unmute {Member}`,
+        value: `Unmutes a member.`
+      })   
       .setTimestamp()
       .setFooter(`F?Help for all commands`);
 
