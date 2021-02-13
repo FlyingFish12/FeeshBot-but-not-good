@@ -58,13 +58,21 @@ module.exports = {
         value: `Unbans a member.`
       })
       .addFields({
+        name: `F?Warn {Member} [Reason]`,
+        value: `Warns a member.`
+      })
+      .addFields({
         name: `F?Mute {Member} {Time} [Reason]`,
         value: `Mutes a member.`
       })      
       .addFields({
         name: `F?Unmute {Member}`,
         value: `Unmutes a member.`
-      })   
+      })
+      .addFields({
+        name: `F?Purge {number}`,
+        value: `Purges the messages in the chat. number must be equal to or less than 100`
+      })
       .setTimestamp()
       .setFooter(`F?Help for all commands`);
 
