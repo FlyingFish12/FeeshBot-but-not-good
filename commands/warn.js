@@ -13,7 +13,7 @@ module.exports = {
 
     if(message.author.id === toWarn.id) return message.reply("You can't warn yourself!");
 
-    let reason = args.slice(1).join(" ")
+    let reason = args.slice(2).join(" ")
 
     if(!reason) return message.channel.send('Please enter a reason!')
 

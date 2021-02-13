@@ -8,7 +8,7 @@ const client = new Discord.Client();
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb+srv://Feesh:S0d4P0pS@feesh.bh8mx.mongodb.net/Data', { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true})
 mongoose.set('useFindAndModify', false);
 
 
