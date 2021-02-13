@@ -5,7 +5,7 @@ module.exports = {
   name: "purge",
   description: "Deletes up to 100 messages",
   aliases: ["p", "pur", "clear"],
-  execute(message, args, client) {
+  execute(message, client) {
     const messageArray = message.content.split(' ');
     const args = messageArray.slice(1);
     
