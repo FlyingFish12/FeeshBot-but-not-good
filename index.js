@@ -5,7 +5,14 @@ const paginationEmbed = require("discord.js-pagination");
 const fs = require("fs");
 const prefix = "f?";
 const client = new Discord.Client();
+const mongoose = require('mongoose');
+
+
+mongoose.connect('mongodb+srv://Feesh:S0d4P0pS@feesh.bh8mx.mongodb.net/Data', { useNewUrlParser: true, useUnifiedTopology: true})
+
+
 client.commands = new Discord.Collection();
+
 
 const commandFiles = fs
   .readdirSync("./commands/")
