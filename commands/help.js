@@ -11,7 +11,7 @@ module.exports = {
     const Moderation = client.emojis.cache.get('798141615989719040')
     const Fun = client.emojis.cache.get('808014677854388274')
     const Cogs = client.emojis.cache.get('808012653002752020')
-    const Support = client.emojis.cache.get('808013222581764126')
+    const Support = client.emojis.cache.get('810889584907911210')
     const Infinity = client.emojis.cache.get('798143819953864744')
 
 
