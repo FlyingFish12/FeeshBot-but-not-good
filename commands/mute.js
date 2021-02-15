@@ -26,7 +26,7 @@ module.exports = {
 
           if(!mutedRole) {
             try {
-                mutedRole = await message.guild.createRole({
+                mutedRole = await message.guild.roles.create({
                     name: "Muted",
                     color: "#000000",
                     permissions: []
