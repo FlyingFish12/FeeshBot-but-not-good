@@ -61,10 +61,10 @@ module.exports = {
     }
     setTimeout(async() => {
         try {
+          if (!target.roles.cache.has(mutedRole.id)) return;
           await target.roles.remove(mutedRole);
-          message.channel.send(`${target} was unmuted.`)
         } catch (err) {
-          message.channel.send('⚠️ Failed to unmute. Try again.', err.message)
+          message.channel.send(`⚠️ Failed to unmute ${target.tag}. Try again.`, err.message)
         }
     }, ms(time));
   }
