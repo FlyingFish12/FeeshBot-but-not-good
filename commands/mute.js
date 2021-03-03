@@ -8,8 +8,11 @@ module.exports = {
   description: "A mute command",
   aliases: ["m"],
   execute:async(message, args, client) => {
-    
-    const modlog = '797169854263984159'
+
+    const muteEmbed = new Discord.MessageEmbed()
+          .setColor(`RANDOM`)
+          .setTitle(`Member Muted`)
+          .setTimestamp()
 
     if (!message.member.hasPermission('MANAGE_MESSAGES'))
         return message.channel.send("⚠️ Insufficient permissions")
@@ -40,7 +43,7 @@ module.exports = {
                 });
     
             } catch(err) {
-                console.log(err.stack);
+                message.channel.send('⚠️ Failed to make mute role. May be due to not having the correct permissions. Try again.');
             }
         }
 
@@ -50,21 +53,20 @@ module.exports = {
       await target.roles.add(mutedRole);
 
       if (!reason) {
-        message.channel.send(`${target} was muted by ${message.author} for ${time} and for the reason: No reason given`);
+        reason = 'No Reason Specified'
       }
-      if (reason) {
-      message.channel.send(`${target} was muted by ${message.author} for ${time} and for the reason: ${reason}`)
-      }
+      muteEmbed.setDescription(`Member muted: ${target} (${target.user.tag})\nModerator: ${message.author} (${message.author.tag})\nHow long: ${time}\nReason: ${reason}`)
+      message.channel.send(muteEmbed)
     } catch (err) {
       console.log(err)
-      return message.channel.send('⚠️ Failed to mute. Try again.', err.message);
+      return message.channel.send('⚠️ Failed to mute. This may be due to role or member hierarchy. Try again.', err.message);
     }
     setTimeout(async() => {
         try {
           if (!target.roles.cache.has(mutedRole.id)) return;
           await target.roles.remove(mutedRole);
         } catch (err) {
-          message.channel.send(`⚠️ Failed to unmute ${target.tag}. Try again.`, err.message)
+          message.channel.send(`⚠️ Failed to unmute ${target} (${target.user.tag}). Try again.`, err.message)
         }
     }, ms(time));
   }
