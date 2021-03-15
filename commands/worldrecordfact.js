@@ -2,16 +2,9 @@ const { MessageEmbed, Discord } = require("discord.js");
 const human = require("humanize");
 const paginationEmbed = require("discord.js-pagination");
 module.exports = {
-  name: "worldrecordfact",
+  name: "recordfact",
   description: "An worldrecord fact command",
-  aliases: [
-    "record",
-    "worldrecord",
-    "recordfact",
-    "recordfacts",
-    "worldrecordfacts",
-    "rf",
-  ],
+  aliases: ['Record', 'worldrecord', 'worldrecords', 'recordfacts', 'rf'],
   execute(message, args, client) {
     const jsonData = require("../arrays/rcd.json");
     const records = Object.values(jsonData);

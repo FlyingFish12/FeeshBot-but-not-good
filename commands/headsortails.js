@@ -5,7 +5,7 @@ const paginationEmbed = require('discord.js-pagination');
 module.exports ={
     name: 'headsortails',
     description: "A heads or tails command",
-    aliases: ['hot','cf','coinflip','flip', 'headsortails'],
+    aliases: ['hot','cf','coinflip','flip', 'headsortails', 'coin'],
     execute(message,args,client){
         const headsortails = {
             "heads": ['heads', 'h', 'head'],
