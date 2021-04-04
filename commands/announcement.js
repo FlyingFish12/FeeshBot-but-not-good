@@ -14,9 +14,9 @@ roleMan.role.add(announRole)
 message.channel.send('successfully added role')
 try{
 a
-} catch(err)
+} catch(err) {
 console.log(err)
 message.channel.send('Failed to add the role!')
-    
+    }
   }
 }
