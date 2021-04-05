@@ -10,7 +10,7 @@ module.exports = {
    if(!message.guild.id === 787339571422691368) return
 const announRole = message.guild.roles.cache.find(aR => aR.name === "Announcements")
 const roleMan = message.author
-roleMan.role.add(announRole)
+roleMan.roles.add(announRole)
 message.channel.send('successfully added role')
 try{
 a
