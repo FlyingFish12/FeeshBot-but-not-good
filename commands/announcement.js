@@ -11,11 +11,12 @@ module.exports = {
 const announRole = message.guild.roles.cache.find(aR => aR.name === "Announcements")
 const Target = message.author
 
-try{
-await Target.roles.add(announRole)
-message.channel.send('successfully added role')
-} catch(err) {
-console.log(err)
+try {
+
+await Target.roles.add(announRole);
+
+message.channel.send('successfully added the announcement role');
+} catch (err) {
 message.channel.send('Failed to add the role!')
     }
   }
