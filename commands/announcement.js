@@ -9,10 +9,10 @@ module.exports = {
   execute: async(message, args, client) => {
    if(!message.guild.id === 787339571422691368) return;
 const announRole = message.guild.roles.cache.find(aR => aR.name === "Announcements")
-const roleMan = message.author
+const Target = message.author
 
 try{
-await roleMan.roles.add(announRole)
+await Target.roles.add(announRole)
 message.channel.send('successfully added role')
 } catch(err) {
 console.log(err)
