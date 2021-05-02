@@ -7,11 +7,17 @@ module.exports ={
     description: "A Say Command",
     aliases: ['say','s','write', 'repeat'],
     execute(message, args, client){
-    let saymessage = args.slice(1).join(" ")
+    
+        let description = args.slice(1).join(" ");
+
+            if (!description) {
+            return message.channel.send("Can't repeat nothing, nothing.");
+            }
 
         const sayembed = new Discord.MessageEmbed()
-            .setColor('#50C878')
-            .setDescription(saymessage).cleanContent;
+            .setColor(`RANDOM`)
+            .setDescription(description);
+
         message.channel.send(sayembed)
     }
 }
