@@ -15,10 +15,7 @@ module.exports = {
   execute(message, args, client) {
     const guilds = client.guilds.cache.array();
 
-    let days = Math.floor(client.uptime / 86400000);
-    let hours = Math.floor(client.uptime / 3600000) % 24;
-    let minutes = Math.floor(client.uptime / 60000) % 60;
-    let seconds = Math.floor(client.uptime / 1000) % 60;
+    const duration = moment.duration(message.client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
 
     const botinfoEmbed = new Discord.MessageEmbed()
       .setColor(`#454ade`)
@@ -38,7 +35,7 @@ module.exports = {
       .addField("Uptime ", `\`\`\`${duration}\`\`\``, true)
       .addField("Users", `\`\`\`${message.client.users.cache.size}\`\`\``, true)
       .addField("Mem Usage", `\`\`\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB\`\`\``, true)
-      
+
       .setTimestamp()
       .setFooter(`ID:735918313921708053`);
     message.channel.send(botinfoEmbed);
