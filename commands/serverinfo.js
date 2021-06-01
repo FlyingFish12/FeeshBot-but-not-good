@@ -7,6 +7,7 @@ module.exports ={
     description: "A serverinfo command",
     aliases: ['server','svr','si','guild','guildinfo'],
     execute(message,args,client){
+        const serverIcon = message.guild.iconURL();
         const Owner_Crown = client.emojis.cache.get('797172246132817972')
         const Earth_Rotate = client.emojis.cache.get('797173733243748383')
         const ID_Logo = client.emojis.cache.get('797186040430854215')
@@ -22,6 +23,7 @@ module.exports ={
         const serverEmbed = new Discord.MessageEmbed()
                .setColor(`#4893C0`)
                .setTitle(`Server Info`)
+               .setThumbnail(serverIcon)
                .addFields(
                {name: `Server Name ${Name}`, value: `\`\`\`${message.guild.name}\`\`\``, inline: true},
                {name: `Server Owner ${Owner_Crown}`, value: `\`\`\`${guildOwner}\`\`\``, inline: true},

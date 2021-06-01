@@ -10,7 +10,7 @@ module.exports = {
 
     if(!message.guild.id === 787339571422691368) return;
 
-    let announce = message.guild.roles.cache.get("829024156887679014");
+    let announce = message.guild.roles.cache.get("828530728219836427");
     message.member.roles.add(announce);
 
     message.channel.send('Successfully added the announcement role.');

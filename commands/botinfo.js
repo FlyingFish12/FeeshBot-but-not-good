@@ -3,6 +3,11 @@ const Discord = require("discord.js");
 const version = require('../package.json');
 const human = require("humanize");
 const paginationEmbed = require("discord.js-pagination");
+const moment = require("moment");
+const m = require("moment-duration-format");
+let cpuStat = require("cpu-stat")
+let os = require('os')
+
 module.exports = {
   name: "botinfo",
   description: "A command that shows the bots information",
@@ -29,6 +34,11 @@ module.exports = {
         { name: `Node.js Version`, value: `\`\`\`${process.version}\`\`\``, inline: true },
         { name: `Discord.js Version`, value: `\`\`\`${djsversion}\`\`\``, inline: true },
       )
+      .addField("API Latency", `\`\`\`${(message.client.ws.ping)}ms\`\`\``)
+      .addField("Uptime ", `\`\`\`${duration}\`\`\``, true)
+      .addField("Users", `\`\`\`${message.client.users.cache.size}\`\`\``, true)
+      .addField("Mem Usage", `\`\`\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB\`\`\``, true)
+      
       .setTimestamp()
       .setFooter(`ID:735918313921708053`);
     message.channel.send(botinfoEmbed);
