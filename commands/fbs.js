@@ -7,6 +7,7 @@ module.exports = {
   description: "A servers command",
   aliases: ["servers"],
   execute(message, args, client) {
+    const guildOwner = message.guild.owner.user.tag
     const isBotOwner = message.author.id === `427476318050058251`;
     if (!isBotOwner) {
       message.channel.send(`**Secret tunnel! SECRET TUNNEL!**\n\nBut your not allowd to go through :( How sad is that?`);
@@ -22,7 +23,7 @@ module.exports = {
           }`
         );
         current.forEach((g) =>
-          embed.addField(g.name, `**Owner:** ${g.owner.user.tag}`)
+          embed.addField(g.name, `**Owner:** ${guildOwner}`)
         );
         return embed;
       };
