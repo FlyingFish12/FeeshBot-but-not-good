@@ -23,18 +23,30 @@ module.exports = {
       if (member) {
           if (!reason) {
               return member.kick().then(member => {
-              message.channel.send(`${member.user.tag} was kicked by ${message.author}. no reason was provided.`);
+                const kickNoResEmbed = new Discord.MessageEmbed()
+                .setColor(`#EF4444`)
+                .setTitle(`Member Kicked`)
+                .setDescription(`Member: ${member.user.tag}\nModerater: ${message.author}\nReason: No reason provided`)
+                .setTimestamp()
+
+            message.channel.send(kickNoResEmbed)
           })
       }
       if (reason) {
           member.kick().then(member => {
-          message.channel.send(`${member.user.tag} was kicked by ${message.author}. ${reason}.`);
+            const kickResEmbed = new Discord.MessageEmbed()
+            .setColor(`#EF4444`)
+            .setTitle(`Member Kicked`)
+            .setDescription(`Member: ${member.user.tag}\nModerater: ${message.author}\nReason: ${reason}`)
+            .setTimestamp()
+
+            message.channel.send(kickResEmbed)
       })
       }
      }
       } catch (err) {
       console.log(err)
-      return message.channel.send('⚠️ Failed to kick. Maybe I don\'t have the correct permissions? Please Try again.', err.message);
+      return message.channel.send('⚠️ Failed to kick. Maybe I don\'t have the correct permissions? Please Try again.');
     }
    }
   }

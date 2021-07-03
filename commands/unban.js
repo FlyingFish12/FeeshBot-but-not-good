@@ -19,14 +19,12 @@ module.exports = {
             if(!bUser) return
             message.guild.members.unban(bUser.user)
                 const unbanEmbed = new Discord.MessageEmbed()
-                    .setColor(`#800020`)
+                    .setColor(`#34D399`)
                     .setTitle(`Member Unbanned`)
-                    .setDescription(`Member : <@${userID}>\nModerater : ${message.author}`)
-                    .setFooter('You get another chance...')
+                    .setDescription(`Member: ${userID}\nModerater: ${message.author}`)
+                    .setTimestamp()
 
             message.channel.send(unbanEmbed)
-
-        client.channels.cache.get('772513911961550858').send(unbanEmbed)
       })
     }
   }

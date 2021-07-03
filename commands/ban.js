@@ -19,27 +19,23 @@ module.exports = {
         if (!reason) {
             return member.ban().then(member => {
                 const banNoResEmbed = new Discord.MessageEmbed()
-                    .setColor(`#800020`)
-                    .setTitle(`Member Unbanned`)
-                    .setDescription(`Member : <@${member.user.tag}>\nModerater : ${message.author}\nReason : No reason provided`)
-                    .setFooter('Hah noob.')
+                    .setColor(`#EF4444`)
+                    .setTitle(`Member Banned`)
+                    .setDescription(`Member: ${member.user.tag}\nModerater: ${message.author}\nReason: No reason provided`)
+                    .setTimestamp()
 
             message.channel.send(banNoResEmbed)
-
-        client.channels.cache.get('772513911961550858').send(banNoResEmbed)
         })
     }
     if (reason) {
         member.ban().then(member => {
             const banResEmbed = new Discord.MessageEmbed()
-                    .setColor(`#800020`)
-                    .setTitle(`Member Unbanned`)
-                    .setDescription(`Member : <@${member.user.tag}>\nModerater : ${message.author}\nReason : ${reason}`)
-                    .setFooter('Hah noob.')
+                    .setColor(`#EF4444`)
+                    .setTitle(`Member Banned`)
+                    .setDescription(`Member: ${member.user.tag}\nModerater: ${message.author}\nReason: ${reason}`)
+                    .setTimestamp()
 
             message.channel.send(banResEmbed)
-
-        client.channels.cache.get('772513911961550858').send(banResEmbed)
     })
    }
   }
