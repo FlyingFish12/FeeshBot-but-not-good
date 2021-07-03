@@ -28,12 +28,11 @@ module.exports ={
                {name: `Server Name ${Name}`, value: `\`\`\`${message.guild.name}\`\`\``, inline: true},
                {name: `Server Owner ${Owner_Crown}`, value: `\`\`\`${guildOwner}\`\`\``, inline: true},
                {name: `Server ID ${ID_Logo}`, value: `\`\`\`${message.guild.id}\`\`\``, inline: true},
+               {name: `Server Members ${All_Member}`, value: `\`\`\`${message.guild.memberCount}\`\`\``, inline: true},
                {name: `Server Moderation Level ${Moderation}`, value: `\`\`\`${message.guild.verificationLevel || 'None'}\`\`\``, inline: true},
                {name: `Server Region ${Earth_Rotate}`, value: `\`\`\`${message.guild.region}\`\`\``, inline: true},
-               {name: `Server Creation ${Server_Creation}`, value: `\`\`\`${human.date('d.m.y | h:i:s', message.guild.createdAt)} ${message.guild.createdAt >= 12? "AM" : "PM"}\`\`\``, inline: true},
-               {name: `Server Members ${All_Member}`, value: `\`\`\`${message.guild.memberCount}\`\`\``, inline: true})
+               {name: `Server Creation ${Server_Creation}`, value: `\`\`\`${human.date('d.m.y | h:i:s', message.guild.createdAt)} ${message.guild.createdAt >= 12? "AM" : "PM"}\`\`\``, inline: true})
                .setTimestamp()
-               .setFooter(`Say "F?ServerRoles" for a list of the servers roles!`)
        message.channel.send(serverEmbed);
 
     }
