@@ -4,7 +4,7 @@ const paginationEmbed = require("discord.js-pagination");
 module.exports = {
   name: "recordfact",
   description: "An worldrecord fact command",
-  aliases: ['Record', 'worldrecord', 'worldrecords', 'recordfacts', 'rf'],
+  aliases: ['record', 'worldrecord', 'worldrecords', 'recordfacts', 'rf'],
   execute(message, args, client) {
     const jsonData = require("../arrays/rcd.json");
     const records = Object.values(jsonData);
