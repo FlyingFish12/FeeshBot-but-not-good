@@ -6,7 +6,15 @@ module.exports = {
   description: "Finds a channel in the server called suggestions and then creates the channel",
   aliases: ["suggest", "suggestion", "suggests"],
   execute(message, args, client) {
-    message.delete()
+    
+    setTimeout(async() => {
+        try {
+          message.delete()
+        } catch (err) {
+          message.channel.send(`I really wanted to delete that message but I probably don't have perms.`, err.message)
+        }
+    }, 10);
+
     const suggestion = args.slice(1).join(" ")
     if(!suggestion) return message.reply("You must enter some content!")
     const suggestchannel = message.guild.channels.cache.find(c => c.name === 'suggestions');
