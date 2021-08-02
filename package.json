@@ -19,7 +19,7 @@
   "dependencies": {
     "cpu-stat": "^2.0.1",
     "dblapi.js": "^2.4.1",
-    "discord.js": "^12.5.1",
+    "discord.js": "^12.5.3",
     "discord.js-pagination": "^1.0.3",
     "https": "^1.0.0",
     "humanize": "0.0.9",
@@ -28,6 +28,7 @@
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.11.16",
     "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
     "npm": "^6.14.11",
     "os": "^0.1.1",
     "weky": "^2.0.7"

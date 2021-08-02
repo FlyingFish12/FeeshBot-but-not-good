@@ -5,7 +5,7 @@ const paginationEmbed = require('discord.js-pagination');
 module.exports={
     name: 'invite',
     description: "An invite command",
-    aliases: ['botinvite'],
+    aliases: ['botinvite', 'inv'],
     execute(message,args,client){
         const InviteEmbed = new Discord.MessageEmbed()
         .setColor(`#DA005A`)

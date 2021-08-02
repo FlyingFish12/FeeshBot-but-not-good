@@ -30,7 +30,7 @@ module.exports = {
     });
     let Embed = new MessageEmbed()
       .setTitle(`${message.guild.name} - Emote count : ${OverallEmojis}`)
-      .setDescription(`**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`)
+      .setDescription(`Animated (${Animated}) :\n${EmojisAnimated}\n\nStandard (${EmojiCount}) :\n${Emojis}`)
       .setColor('RANDOM');
 
     if (Embed.length > 2000) {
