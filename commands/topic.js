@@ -9,6 +9,6 @@ module.exports = {
     const jsonData = require("../arrays/topics.json");
     const topics = Object.values(jsonData);
     const randomTopic = topics[parseInt(Math.random() * topics.length)];
-    message.channel.send(randomTopic + ` - DEBATE!`);
+    message.channel.send(randomTopic);
   },
 };
