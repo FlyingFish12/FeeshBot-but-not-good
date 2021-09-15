@@ -4,7 +4,7 @@ const human = require("humanize");
 const paginationEmbed = require("discord.js-pagination");
 const fs = require("fs");
 const prefix = "f?";
-const client = new Discord.Client();
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 
 
